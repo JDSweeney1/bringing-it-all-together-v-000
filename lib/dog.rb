@@ -42,8 +42,6 @@ class Dog
   #   Dog
   # end
   def save
-    # if self.idea
-    #
     sql = <<-SQL
       INSERT INTO dogs (name, breed) VALUES (?, ?)
     SQL
