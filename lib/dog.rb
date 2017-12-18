@@ -49,7 +49,6 @@ class Dog
 
     data = DB[:conn].execute(sql, id)
     Dog.new(id: data[0], name: data[1], breed: data[2])
-    Dog
   end
 
 end
