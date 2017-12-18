@@ -41,15 +41,15 @@ class Dog
     dog
   end
 
-  # def self.find_by_id(id)
-  #   sql = <<-SQL
-  #     SELECT * FROM students
-  #     WHERE id = ?
-  #   SQL
-  #
-  #   data = DB[:conn].execute(sql, id)
-  #   Dog.new(id: data[0], name: data[1], breed: data[2])
-  #   Dog
-  # end
+  def self.find_by_id(id)
+    sql = <<-SQL
+      SELECT * FROM students
+      WHERE id = ?
+    SQL
+
+    data = DB[:conn].execute(sql, id)
+    Dog.new(id: data[0], name: data[1], breed: data[2])
+    Dog
+  end
 
 end
